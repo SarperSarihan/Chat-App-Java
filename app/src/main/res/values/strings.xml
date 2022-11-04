@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Proje</string>
+    <string name="hos_geldiniz">Hoşgeldiniz</string>
+    <string name="giris_yap">Giriş Yap</string>
+    <string name="giri_yap">Giriş Yap</string>
+    <string name="sifre">Şifre</string>
+    <string name="e_mail">E mail</string>
+    <string name="giriss_yap">Giriş Yap</string>
+    <string name="kayit_ol">Kayıt Ol</string>
+    <string name="isim">İsim</string>
+    <string name="soyisim">Soyisim</string>
+    <string name="sifree">Şifre</string>
+    <string name="sifre_tekrar">Şifre Tekrar</string>
+    <string name="kayitol">KAYIT OL</string>
+    <string name="giris_ya">Giriş Yap</string>
+</resources>

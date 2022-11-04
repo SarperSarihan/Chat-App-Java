@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="false"
+    android:overScrollMode="never"
+    android:scrollbars="none"
+    android:padding="@dimen/_24sdp"
+    tools:context=".activities.SignupActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:text="Kayıt Ol"
+            android:textColor="@color/primary_text"
+            android:textSize="@dimen/_18ssp"
+            android:textStyle="bold"/>
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:layout_width="@dimen/_70sdp"
+                android:layout_height="@dimen/_70sdp"
+                android:background="@color/input_background"
+                android:scaleType="center"
+                app:riv_oval="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Resim Ekle"
+                android:textColor="@color/secondary_text"
+                android:textSize="@dimen/_10ssp"
+                android:textStyle="bold"/>
+        </FrameLayout>
+        <EditText
+            android:id="@+id/isim"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45sdp"
+            android:layout_marginTop="@dimen/_40sdp"
+            android:background="@color/input_background"
+            android:hint="@string/isim"
+            android:paddingStart="@dimen/_18sdp"
+            android:imeOptions="actionNext"
+            android:inputType="text"
+            android:importantForAutofill="no"
+            android:textColor="@color/primary_text"
+            android:textSize="@dimen/_13ssp" />
+        <EditText
+            android:id="@+id/inputemail"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45sdp"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:background="@color/input_background"
+            android:hint="@string/e_mail"
+            android:paddingStart="@dimen/_18sdp"
+            android:imeOptions="actionNext"
+            android:inputType="textEmailAddress"
+            android:importantForAutofill="no"
+            android:textColor="@color/primary_text"
+            android:textSize="@dimen/_13ssp" />
+
+        <EditText
+            android:id="@+id/inputsifre"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45sdp"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:background="@color/input_background"
+            android:hint="@string/sifree"
+            android:paddingStart="@dimen/_18sdp"
+            android:imeOptions="actionNext"
+            android:inputType="textPassword"
+            android:importantForAutofill="no"
+            android:textColor="@color/primary_text"
+            android:textSize="@dimen/_13ssp" />
+
+        <EditText
+            android:id="@+id/sifretekrar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45sdp"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:background="@color/input_background"
+            android:hint="@string/sifre_tekrar"
+            android:paddingStart="@dimen/_18sdp"
+            android:imeOptions="actionNext"
+            android:inputType="textPassword"
+            android:importantForAutofill="no"
+            android:textColor="@color/primary_text"
+            android:textSize="@dimen/_13ssp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/butonkayitol"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:text="@string/kayitol"
+            android:textSize="@dimen/_13ssp"
+            android:textStyle="bold"
+            app:cornerRadius="@dimen/_10sdp"/>
+        <TextView
+            android:id="@+id/textgirisyap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:text="@string/giris_ya"
+            android:textColor="@color/primary"
+            android:textSize="@dimen/_15ssp"
+            android:textStyle="bold"/>
+
+
+    </LinearLayout>
+
+</ScrollView>
