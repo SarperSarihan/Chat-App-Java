@@ -13,4 +13,14 @@
     <string name="sifre_tekrar">Şifre Tekrar</string>
     <string name="kayitol">KAYIT OL</string>
     <string name="giris_ya">Giriş Yap</string>
+    <string name="email">Email</string>
+    <string name="ifre">Şifre</string>
+    <string name="girisss_yap">Giriş Yap</string>
+    <string name="kay_t_ol">Kayıt Ol</string>
+    <string name="resim_ekle">Resim Ekle</string>
+    <string name="kay_t_oll">Kayıt Ol</string>
+    <string name="sim">İsim</string>
+    <string name="ifreyi_do_rula">Şifreyi Doğrula</string>
+    <string name="kaydol">Kayıt Ol</string>
+    <string name="hesab_m_var">Hesabım Var</string>
 </resources>

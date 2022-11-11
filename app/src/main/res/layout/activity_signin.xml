@@ -10,80 +10,90 @@
     android:padding="@dimen/_24sdp"
     tools:context=".activities.SigninActivity">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-        android:orientation="vertical">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/_40sdp"
-            android:text="@string/hos_geldiniz"
-            android:textColor="@color/primary_text"
-            android:textSize="@dimen/_18ssp"
-            android:textStyle="bold"/>
+    <LinearLayout
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+   <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="@dimen/_40sdp"
+      android:text="Hoşgeldiniz!"
+      android:textColor="@color/primary_text"
+      android:textSize="@dimen/_18ssp"
+      android:textStyle="bold"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_4sdp"
-            android:text="@string/giri_yap"
+            android:text="Giriş Yapın"
             android:textColor="@color/secondary_text"
-            android:textSize="@dimen/_14ssp"
+            android:textSize="@dimen/_12ssp"
             android:textStyle="bold"/>
+    
+    <EditText
+        android:id="@+id/İnputEmail"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_45sdp"
+        android:layout_marginTop="@dimen/_40sdp"
+        android:background="@drawable/background_input"
+        android:hint="@string/email"
+        android:imeOptions="actionNext"
+        android:importantForAutofill="no"
+        android:inputType="textEmailAddress"
+        android:paddingStart="@dimen/_16sdp"
+        android:paddingEnd="@dimen/_16sdp"
+        android:textColor="@color/primary_text"
+        android:textSize="@dimen/_13ssp" />
 
         <EditText
-            android:id="@+id/inputemail"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/_45sdp"
-            android:layout_marginTop="@dimen/_40sdp"
-            android:background="@color/input_background"
-            android:hint="@string/e_mail"
-            android:paddingStart="@dimen/_18sdp"
-            android:imeOptions="actionNext"
-            android:inputType="textEmailAddress"
-            android:importantForAutofill="no"
-            android:textColor="@color/primary_text"
-            android:textSize="@dimen/_13ssp" />
-
-        <EditText
-            android:id="@+id/inputsifre"
+            android:id="@+id/İnputPassword"
             android:layout_width="match_parent"
             android:layout_height="@dimen/_45sdp"
             android:layout_marginTop="@dimen/_16sdp"
-            android:background="@color/input_background"
-            android:hint="@string/sifre"
-            android:paddingStart="@dimen/_18sdp"
+            android:background="@drawable/background_input"
+            android:hint="@string/ifre"
             android:imeOptions="actionDone"
-            android:inputType="textPassword"
             android:importantForAutofill="no"
+            android:inputType="textPassword"
+            android:paddingStart="@dimen/_16sdp"
+            android:paddingEnd="@dimen/_16sdp"
             android:textColor="@color/primary_text"
             android:textSize="@dimen/_13ssp" />
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/butongirisyap"
+            android:id="@+id/SignİnButton"
             android:layout_width="match_parent"
             android:layout_height="@dimen/_50sdp"
-            android:layout_marginTop="@dimen/_30sdp"
-            android:text="@string/giriss_yap"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:text="@string/girisss_yap"
+            android:textColor="@color/white"
             android:textSize="@dimen/_13ssp"
             android:textStyle="bold"
-            app:cornerRadius="@dimen/_10sdp"/>
+            app:cornerRadius="@dimen/_8sdp"/>
         <TextView
-            android:id="@+id/textkayitol"
+            android:id="@+id/TextKayitOl"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_30sdp"
-            android:text="@string/kayit_ol"
+            android:text="@string/kay_t_ol"
             android:textColor="@color/primary"
-            android:textSize="@dimen/_15ssp"
+            android:textSize="@dimen/_13ssp"
             android:textStyle="bold"/>
 
 
 
-
-    </LinearLayout>
-
+   </LinearLayout>
 </ScrollView>
+
+
+
+
+
+
+
