@@ -37,7 +37,7 @@
             android:textStyle="bold"/>
     
     <EditText
-        android:id="@+id/İnputEmail"
+        android:id="@+id/inputEmail"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_45sdp"
         android:layout_marginTop="@dimen/_40sdp"
@@ -52,7 +52,7 @@
         android:textSize="@dimen/_13ssp" />
 
         <EditText
-            android:id="@+id/İnputPassword"
+            android:id="@+id/inputPassword"
             android:layout_width="match_parent"
             android:layout_height="@dimen/_45sdp"
             android:layout_marginTop="@dimen/_16sdp"
