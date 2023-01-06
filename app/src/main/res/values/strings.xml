@@ -23,4 +23,6 @@
     <string name="ifreyi_do_rula">Şifreyi Doğrula</string>
     <string name="kaydol">Kayıt Ol</string>
     <string name="hesab_m_var">Hesabım Var</string>
+    <string name="select_user">Select User</string>
+    <string name="type_a_message">type a message</string>
 </resources>

@@ -30,7 +30,7 @@ public class SignupActivity extends AppCompatActivity {
     private PreferenceManager preferenceManager;
     private String encodedImage;
 
-
+    //preference manager ve set listeners isimli classları çağırmak için kullandığım kod bloğu
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,6 +40,9 @@ public class SignupActivity extends AppCompatActivity {
         setListeners();
 
     }
+    /*Void : geriye değer döndürmeyen metot: burdaki bloğu kaydol sayfasında iken ,kaydol ve hesabım var
+    isimli butonları çalıştırır*/
+
     private void setListeners(){
         binding.TextHesabimVar.setOnClickListener(v ->onBackPressed());
         binding.SignUpButton.setOnClickListener(v ->{
@@ -47,18 +50,19 @@ public class SignupActivity extends AppCompatActivity {
                 signUp();
             }
         });
-
+        //butona basıldığında galeriyi aç
         binding.layoutImage.setOnClickListener(v ->{
             Intent intent=new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
             intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
             pickImage.launch(intent);
         } );
     }
+    //Eğer girilen verilerde yanlışlık varsa ekrana uyarı mesajını göndermek için.
 
     private void showToast(String message){
         Toast.makeText(getApplicationContext(),message,Toast.LENGTH_SHORT).show();
     }
-
+    //firebase verileri için değişkenlerin veri tipi tanımlamaları
     private void signUp(){
         loading(true);
         FirebaseFirestore database =FirebaseFirestore.getInstance();
@@ -85,6 +89,7 @@ public class SignupActivity extends AppCompatActivity {
                 });
 
     }
+    //galeriden ve kamera ile fotoğraf çekip pp seçme
     private String encodeImage(Bitmap bitmap){
         int previewWidht = 150;
         int previewHeight = bitmap.getHeight() * previewWidht/ bitmap.getWidth();
@@ -94,7 +99,7 @@ public class SignupActivity extends AppCompatActivity {
         byte[] bytes= byteArrayOutPutStream.toByteArray();
         return Base64.encodeToString(bytes,Base64.DEFAULT);
     }
-
+    //
     private final ActivityResultLauncher <Intent> pickImage= registerForActivityResult(
             new ActivityResultContracts.StartActivityForResult(),
             result -> {
@@ -115,9 +120,7 @@ public class SignupActivity extends AppCompatActivity {
             }
 
     );
-
-
-
+    //Klavyeden veri gir doğruysa kabul et
     private Boolean isValidSignUpDetails(){
         if (encodedImage == null){
             showToast("Profil Fotoğrafı Seç");
@@ -129,7 +132,7 @@ public class SignupActivity extends AppCompatActivity {
             showToast("Email Giriniz");
             return false;
         }else if (!Patterns.EMAIL_ADDRESS.matcher(binding.inputEmail.getText().toString()).matches()){
-            showToast("Geçerli Bir Resim Girin");
+            showToast("Geçerli Bir Email Giriniz");
             return false;
         }else if (binding.inputPassword.getText().toString().trim().isEmpty()){
             showToast("Şifrenizi Girin");
@@ -144,6 +147,7 @@ public class SignupActivity extends AppCompatActivity {
             return true;
         }
     }
+    //progress bar ile yükleniyor
     private void loading(boolean isLoading){
         if (isLoading){
             binding.SignUpButton.setVisibility(View.INVISIBLE);
